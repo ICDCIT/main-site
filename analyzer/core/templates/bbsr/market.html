@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+
+/*Market Analysis Main graph*/
+window.onload = function () {
+
+var chart1 = new CanvasJS.Chart("MainGraph", {
+    animationEnabled: true,
+
+    title:{
+        text:"Bhubaneshwar Market Analysis"
+    },
+    axisX:{
+        interval: 1
+    },
+    axisY2:{
+        interlacedColor: "rgba(1,77,101,.2)",
+        gridColor: "rgba(1,77,101,.1)",
+        title: "Ratings out of 5"
+    },
+    data: [{
+        type: "bar",
+        name: "companies",
+        axisYType: "secondary",
+        color: "#014D65",
+        dataPoints: [
+            { y: 4.2, label: "The Pal Heights" },
+            { y: 3.5, label: "Orrisa State Handloom" },
+            { y: 3.9, label: "Orissa Mordern Art Gallery" },
+            { y: 4.1, label: "Station Square" },
+            { y: 3.9, label: "Saree Mandir" },
+            { y: 4.2, label: "Ekmara Hart" },
+            { y: 4.3, label: "Big Bazar" },
+            { y: 4.6, label: "Esplanade" },
+            { y: 4.2, label: "INOX" },
+            { y: 4.2, label: "BMC Keshari Mall" },
+            { y: 4.3, label: "Reliance Trends" },
+            { y: 4.3, label: "Market Building" },
+            { y: 4.5, label: "Soumya Handicraft" },
+            { y: 4.3, label: "Utkalika" }
+        ]
+    }]
+});
+
+var chart2 = new CanvasJS.Chart("clothing", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Clothing"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Market Name"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+            { y: 4.3, label: "Market Building" },
+            { y: 4.3, label: "Reliance Trends"},
+            { y: 4.6, label: "Esplanade", indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+            { y: 4.2, label: "BMC Keshari Mall" },
+            { y: 4.3, label: "Big Bazar" },
+            { y: 3.9, label: "Saree Mandir", indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+            { y: 4.2, label: "The Pal Heights" }
+        ]
+    }]
+});
+chart1.render()
+chart2.render();
+}
+</script>
+
+
+</head>
+<body>
+<div id="MainGraph" style="height: 370px; width: 50%;"></div>
+<div id="clothing" style="height: 370px; width: 100%;"></div>
+
+<!-- Table for clothing -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Market Name</th>
+      <th scope="col">Ratings</th>
+      <th scope="col">Address</th>
+      <th scope="col">Famous For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Market building</td>
+      <td>4.3</td>
+      <td>Bhubaneshwar Marg, Unit-2, Ashok Nagar</td>
+      <td>Fashion wears, Accessories, Footwear</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Reliance Trends</td>
+      <td>4.3</td>
+      <td>First Floor,Khata No.444, Kharabela Nagar</td>
+      <td>Fashion wears, Accessories, Footwear</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Esplanade</td>
+      <td>4.6</td>
+      <td>Puri-Cuttak Rd, Rasulgarh Industrial Estate</td>
+      <td>Fashion wears, Accessories, Footwear, Food</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>BMC Keshari</td>
+      <td>4.2</td>
+      <td>2nd St, Unit-2, Ashok Nagar</td>
+      <td>Fashion wears, Accessories, Footwear</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>Big Bazar</td>
+      <td>4.3</td>
+      <td>Forum Mart, 89, Unit 3, Kharabela Nagar</td>
+      <td>Fashion wears, Accessories, Footwear, Food</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Saree Mandir</td>
+      <td>3.9</td>
+      <td>Master Canteen Area, Kharabela Nagar, Bhubaneswar</td>
+      <td>Sarees</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>Pal Heights</td>
+      <td>4.2</td>
+      <td>Nandankanan Rd, j-7,Jayadev Vihar</td>
+      <td>Fashion wears, Accessories, Footwear, Food</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
