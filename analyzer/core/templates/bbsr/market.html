@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script>
 
-/*Market Analysis Main graph*/
+/*Market Analysis Main graph function*/
 window.onload = function () {
 
 var chart1 = new CanvasJS.Chart("MainGraph", {
@@ -46,7 +46,7 @@ var chart1 = new CanvasJS.Chart("MainGraph", {
         ]
     }]
 });
-
+/*Clothing graph function*/
 var chart2 = new CanvasJS.Chart("clothing", {
     animationEnabled: true,
     theme: "light2",
@@ -73,8 +73,95 @@ var chart2 = new CanvasJS.Chart("clothing", {
         ]
     }]
 });
+/*cineme graph function*/
+var chart3 = new CanvasJS.Chart("cinema", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Cinema"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+            { y: 4.2, label: "BMC Keshari Mall" },
+            { y: 4.2, label: "INOX" },
+            { y: 4.6, label: "Esplanade" }
+        ]
+    }]
+});
+
+/*malls graph function*/
+
+var chart4 = new CanvasJS.Chart("malls", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Malls"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+            { y: 4.3, label: "Market Building" },
+            { y: 4.3, label: "Reliance Trends" },
+            { y: 4.2, label: "BMC Keshari Mall" },
+            { y: 4.2, label: "INOX" },
+            { y: 4.6, label: "Esplanade" },
+            { y: 4.3, label: "Big Bazar" },
+            { y: 4.2, label: "The Pal Heights" }
+        ]
+    }]
+});
+
+/*odisha special graph function*/
+
+var chart5 = new CanvasJS.Chart("special", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Odisha Special Markets"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+            { y: 4.3, label: "Utkalika" },
+            { y: 4.5, label: "Saumya Handicraft" },
+            { y: 4.2 , label: "Ekmara hart" },
+            { y: 3.9, label: "Saree Mandir" },
+            { y: 4.1, label: "Station Square" },
+            { y: 3.9, label: "Orissa Modern Art Gallery" },
+            { y: 3.5, label: "Orissa State Handloom" }
+        ]
+      }]
+    });
+
+
+
 chart1.render()
-chart2.render();
+chart2.render()
+chart3.render()
+chart4.render()
+chart5.render();
 }
 </script>
 
@@ -92,10 +179,25 @@ chart2.render();
 
 <body>
 <div class="container">
-<div id="MainGraph" style="height: 370px; width: 70%;"></div>
-<div id="clothing" style="height: 300px; width: 70%;"></div>
+  <!-- Main graph -->
+  <div id="MainGraph" style="height: 370px; width: 70%;"></div>
+
+  <!-- Clothing -->
+  <div id="clothing" style="height: 300px; width: 70%;"></div>
+
+  <!-- Cinema -->
+  <div id="cinema" style="height: 300px; width: 70%;"></div>
+
+  <!-- Malls -->
+  <div id="malls" style="height: 300px; width: 70%;"></div>
+
+  <!-- odisha special -->
+  <div id="special" style="height: 300px; width: 70%;"></div>
+
 </div>
-<!-- Table for clothing -->
+
+
+<!-- Table -->
 <table class="table table-striped">
   <thead>
     <tr>
@@ -159,7 +261,7 @@ chart2.render();
 
   </tbody>
 </table>
-<!-- End table for clothing -->
+<!-- End table -->
 
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+window.onload = function () {
+
+/*Museum and Important buildings function*/
+var chart1 = new CanvasJS.Chart("museum", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Museums and other Places"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Museum Of Tribal Arts And Artifacts" },
+{ y: 4.5, label: "Dhauli Shanti Stupa" },
+{ y: 4.1, label: "CIFA Aquarium" },
+{ y: 4.3, label: "Regional Science Center" },
+{ y: 4.3, label: "Pathani Samantha Planetarium" }
+]
+    }]
+});
+/*park graph function*/
+var chart2 = new CanvasJS.Chart("park", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Parks"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.4, label: "Nandankanan Zoological Park" },
+{ y: 4.0, label: "Dhauli Giri Hills" },
+{ y: 4.3, label: "Chilika Lake" },
+{ y: 4.5, label: "Buddha Jayanti Park" },
+{ y: 4.1, label: "CIFA Aquarium" },
+{ y: 4.3, label: "Ekamra Kanan" },
+{ y: 4.3, label: "Biju Patnaik Park" }
+]
+    }]
+});
+
+/*temples graph function*/
+
+var chart3 = new CanvasJS.Chart("temple", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Temples"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Temples"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.5, label: "Sisireswar" },
+{ y: 4.5, label: "Papanasini Tank" },
+{ y: 5.0, label: "Siddheshwar" },
+{ y: 4.5, label: "Parsurameswar" },
+{ y: 5.0, label: "Makandeswar" },
+{ y: 4.6, label: "Mukteswara" },
+{ y: 4.5, label: "Lingraj" },
+{ y: 4.6, label: "Yameswar" },
+{ y: 4.3, label: "Chitrakarini" },
+{ y: 4.4, label: "Vaital Deul" },
+{ y: 4.7, label: "Bakreswar" },
+{ y: 4.4, label: "Anantavasudev" },
+{ y: 4.6, label: "Bhaskareswar" },
+{ y: 4.6, label: "Sun" }
+]
+    }]
+});
+
+/*photograpgy graph function*/
+
+var chart4 = new CanvasJS.Chart("photography", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Places For Photography"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Sun Temple" },
+{ y: 4.4, label: "NandanKanan Zoological Park" },
+{ y: 4.0, label: "Dhauli Giri Hills" },
+{ y: 4.3, label: "Chilika Hills" },
+{ y: 4.3, label: "Udaigiri Pilgrimage" }
+]
+      }]
+    });
+
+chart1.render()
+chart2.render()
+chart3.render()
+chart4.render();
+}
+</script>
+
+
+</head>
+
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:bbsr' %}>Bhubaneshwar</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Food</li>
+  </ol>
+</nav>
+
+<body>
+<div class="container">
+  <!-- Museum and Important buildings -->
+  <div id="museum" style="height: 300px; width: 100%;"></div>
+
+  <!-- Park -->
+  <div id="park" style="height: 300px; width: 100%;"></div>
+
+  <!-- Temples -->
+  <div id="temple" style="height: 300px; width: 100%;"></div>
+
+  <!-- Photography -->
+  <div id="photography" style="height: 300px; width: 100%;"></div>
+</div>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

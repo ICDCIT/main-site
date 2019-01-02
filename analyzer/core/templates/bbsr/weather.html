@@ -1,2 +1,128 @@
+<!DOCTYPE HTML>
 {% load staticfiles %}
-{% include 'core/navbar.html' %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("weather", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Weather"
+    },
+    axisX:{
+        crosshair: {
+            enabled: true,
+            snapToDataPoint: true
+        }
+    },
+    axisY: {
+        title: "Temperature ( in celcius )",
+        crosshair: {
+            enabled: true
+        }
+    },
+    toolTip:{
+        shared:true
+    },
+    legend:{
+        cursor:"pointer",
+        verticalAlign: "bottom",
+        horizontalAlign: "left",
+        dockInsidePlotArea: true,
+        itemclick: toogleDataSeries
+    },
+    data: [{
+        type: "line",
+        showInLegend: true,
+        name: "Highest Temperature",
+        markerType: "triangle",
+        color: "#F08080",
+        dataPoints: [
+{ y: 32.0, label: "January" },
+{ y: 37.8, label: "February" },
+{ y: 39.4, label: "March" },
+{ y: 40.6, label: "April" },
+{ y: 37.8, label: "May" },
+{ y: 42.0, label: "June" },
+{ y: 34.0, label: "July" },
+{ y: 33.9, label: "August" },
+{ y: 34.4, label: "September" },
+{ y: 35.0, label: "October" },
+{ y: 34.0, label: "November" },
+{ y: 29.0, label: "December" }
+]
+    },
+    {
+        type: "line",
+        showInLegend: true,
+        name: "Lowest Temperature",
+        markerType: "square",
+        color: "#0000FF",
+        dataPoints: [
+{ y: 11.0, label: "January" },
+{ y: 13.9, label: "February" },
+{ y: 21.1, label: "March" },
+{ y: 20.0, label: "April" },
+{ y: 21.7, label: "May" },
+{ y: 24.0, label: "June" },
+{ y: 24.0, label: "July" },
+{ y: 22.2, label: "August" },
+{ y: 24.4, label: "September" },
+{ y: 18.0, label: "October" },
+{ y: 15.0, label: "November" },
+{ y: 16.0, label: "December" }
+]
+    },
+    {
+        type: "line",
+        showInLegend: true,
+        name: "Average Temperature",
+        lineDashType: "dash",
+        color: "#008000",
+        dataPoints: [
+{ y: 20.0, label: "January" },
+{ y: 25.0, label: "February" },
+{ y: 28.9, label: "March" },
+{ y: 30.0, label: "April" },
+{ y: 30.0, label: "May" },
+{ y: 30.0, label: "June" },
+{ y: 28.0, label: "July" },
+{ y: 28.3, label: "August" },
+{ y: 28.3, label: "September" },
+{ y: 27.0, label: "October" },
+{ y: 25.0, label: "November" },
+{ y: 22.0, label: "December" }
+]
+    }]
+});
+chart.render();
+
+function toogleDataSeries(e){
+    if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+        e.dataSeries.visible = false;
+    } else{
+        e.dataSeries.visible = true;
+    }
+    chart.render();
+}
+
+}
+</script>
+</head>
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:bbsr' %}>Bhubaneshwar</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Weather</li>
+  </ol>
+</nav>
+
+<body>
+<div id="weather" style="height: 570px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

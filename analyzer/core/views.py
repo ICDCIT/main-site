@@ -16,8 +16,8 @@ def BbsrMarket(request):
 def BbsrFood(request):
     return render(request, 'bbsr/food.html')
 
-def BbsrMonument(request):
-    return render(request, 'bbsr/monument.html')
+def BbsrPlaces(request):
+    return render(request, 'bbsr/places.html')
 
 def BbsrWeather(request):
     return render(request, 'bbsr/weather.html')

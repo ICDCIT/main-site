@@ -1,2 +1,287 @@
+<!DOCTYPE HTML>
 {% load staticfiles %}
-{% include 'core/navbar.html' %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+
+/*Market Analysis Main graph function*/
+window.onload = function () {
+/*Asian Cuisine function*/
+var chart1 = new CanvasJS.Chart("asian", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Asian Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Barbeque Nation" },
+{ y: 3.7, label: "Michael’s Kitchen" },
+{ y: 3.5, label: "Eram Rooftop" }
+]
+    }]
+});
+/*chinese graph function*/
+var chart2 = new CanvasJS.Chart("chinese", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Chinese Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+            { y: 4.1, label: "Silver Streak" },
+            { y: 3.9, label: "The Chicken Dinesty" },
+            { y: 4.0, label: "Taste Of China" },
+            { y: 3.6, label: "99 North" },
+            { y: 3.8, label: "Adda" },
+            { y: 3.7, label: "Chill Umm" },
+            { y: 3.7, label: "Lal Qila" },
+            { y: 3.8, label: "Richard’s Kitchen" },
+            { y: 4.0, label: "Aangan Horizon" },
+            { y: 4.3, label: "Chai Break" },
+            { y: 4.2, label: "Food Fever" },
+            { y: 4.3, label: "Mainland China" }
+        ]
+    }]
+});
+
+/*continental graph function*/
+
+var chart3 = new CanvasJS.Chart("continental", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Continental Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Barbeque Nation" },
+{ y: 4.0, label: "Aangan Horizon" },
+{ y: 4.3, label: "Chai Break" },
+{ y: 3.5, label: "Eram Rooftop" }
+]
+    }]
+});
+
+/*italian graph function*/
+
+var chart4 = new CanvasJS.Chart("italian", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Italian Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.10, label: "Mamma Mia - Mayfair Lagoon" },
+{ y: 4.30, label: "Chai Break" }
+]
+      }]
+    });
+
+
+/*mexican graph function*/
+
+var chart5 = new CanvasJS.Chart("mexican", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Mexican Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.10, label: "Mamma Mia - Mayfair Lagoon" },
+{ y: 3.80, label: "Adda" }
+]
+      }]
+    });
+
+
+/*cafe graph function*/
+
+var chart6 = new CanvasJS.Chart("cafe", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Cafe"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.91, label: "Tyre Patty" },
+{ y: 4.5, label: "Central perk 7" },
+{ y: 4.1, label: "Mamma Mia - Mayfair Lagoon" },
+{ y: 3.7, label: "Chill Umm" },
+{ y: 3.8, label: "Richard’s Kitchen" },
+{ y: 4.0, label: "Brewberrys The Coffee Bar" },
+{ y: 4.3, label: "Chai Break" },
+{ y: 3.8, label: "Cha cTea" }
+]
+      }]
+    });
+
+/*fast food graph function*/
+
+var chart7 = new CanvasJS.Chart("fastfood", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Fast Food"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.90, label: "The Chicken Dinesty" },
+{ y: 3.80, label: "Richard’s Kitchen" }
+]
+      }]
+    });
+
+
+
+/*average cost graph function*/
+
+var chart8 = new CanvasJS.Chart("cost", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Average Cost for Two"
+    },
+    axisY:{
+        title: "INR",
+        includeZero: false
+    },
+    axisX:{
+        title: "Locality"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 612, label: "Sahid Nagar" },
+{ y: 700, label: "ChandraSekharpur" },
+{ y: 850, label: "Gajapati Nagar" },
+{ y: 1400, label: "Mayfair Lagoon,Jaydev" },
+{ y: 539, label: "Patia" },
+{ y: 1500, label: "The crown" },
+{ y: 400, label: "Unit 4" }
+]
+      }]
+    });
+
+
+chart1.render()
+chart2.render()
+chart3.render()
+chart4.render()
+chart5.render()
+chart6.render()
+chart7.render()
+chart8.render();
+}
+</script>
+
+
+</head>
+
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:bbsr' %}>Bhubaneshwar</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Food</li>
+  </ol>
+</nav>
+
+<body>
+<div class="container">
+  <!-- Main graph -->
+  <!-- <div id="MainGraph" style="height: 370px; width: 70%;"></div> -->
+
+  <!-- Asian -->
+  <div id="asian" style="height: 300px; width: 100%;"></div>
+
+  <!-- Chinese -->
+  <div id="chinese" style="height: 300px; width: 100%;"></div>
+
+  <!-- Continental -->
+  <div id="continental" style="height: 300px; width: 100%;"></div>
+
+  <!-- Italian -->
+  <div id="italian" style="height: 300px; width: 100%;"></div>
+
+  <!-- Mexican -->
+  <div id="mexican" style="height: 300px; width: 100%;"></div>
+
+  <!-- Cafe -->
+  <div id="cafe" style="height: 300px; width: 100%;"></div>
+
+  <!-- Fast Food -->
+  <div id="fastfood" style="height: 300px; width: 100%;"></div>
+
+  <!-- Average Cost for 2 -->
+  <div id="cost" style="height: 300px; width: 100%;"></div>
+
+</div>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
