@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
+    <script src="js/main.js" > </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <title>Page Title</title>
@@ -18,8 +19,7 @@
 </head>
 <body>
 
-
-
+{% include 'core/navbar.html' %}
 
 <section class="intro carousel slide bg-overlay-light h-auto" id="carouselExampleCaptions">
         <ol class="carousel-indicators">
@@ -28,22 +28,23 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <img id="img1" class="d-block img-fluid " alt="First slide" src="">
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="https://bufiles.blob.core.windows.net/co3615/video/explore.webm"src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                      </video>
             <div class="carousel-caption ">
-                  <h2 class="display-4 text-white mb-2 mt-4">Analyze, Plan and Travel.</h2>
-                <p class="text-white mb-3 px-5 lead">"A small description goes here." </p>
-                <a href="#" class="btn btn-primary btn-capsul px-4 py-2">Bhubaneshwar</a>
-                <a href="#" class="btn btn-primary btn-capsul px-4 py-2">Agra</a>
+                  <h2 class="display-4 text-white mb-2 mt-4"> B H U B A N E S W A R</h2>
+                <p class="text-white mb-3 px-5 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do enim ad minim veniam, </p>
+                <a href={% url 'core:bbsr' %} class="btn btn-primary btn-capsul px-4 py-2">Explore More</a>
             </div>
           </div>
-          <!-- <div class="carousel-item">
-            <img class="d-block img-fluid" alt="First slide" src="https://grafreez.com/wp-content/temp_demos/suffi/img/intro-bg-02.jpg">
+          <div class="carousel-item">
+                <img style="width:100%;" class="pt-3" src="https://images.unsplash.com/photo-1455620611406-966ca6889d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1130&q=80">
             <div class="carousel-caption ">
-                  <h2 class="display-4 text-white mb-2 mt-4">Accept the challenges so that you can feel the exhilaration of victory.</h2>
+                  <h2 class="display-4 text-white mb-2 mt-4">A  G  R  A</h2>
                 <p class="text-white mb-3 px-5 lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do enim ad minim veniam, </p>
-                <a href="#" class="btn btn-primary btn-capsul px-4 py-2">Explore More</a>
+                <a href={% url 'core:agra' %} class="btn btn-primary btn-capsul px-4 py-2">Explore More</a>
             </div>
-          </div> -->
+          </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -55,363 +56,10 @@
         </a>
     </section>
 
-    <!-- OUR SERVICES -->
-
-    <!-- FOOD CHOICE -->
-
-    <section class="info-section" id="info">
-        <div class="container">
-            <div class="head-box text-center mb-5">
-                <h2>OUR SERVICES</h2>
-                <h6 class="text-underline-primary">This is our provided services</h6>
-            </div>
-            <div class="three-panel-block mt-5">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center mb-5 p-lg-3">
-                            <i class="fa fa-laptop box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>Market</h3>
-                            <p class="px-4">Market Analysis of Bhubaneshwar</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href={% url 'core:bbsrmarket' %} >explore</a>
-                                   </div>
-
-                                   <!-- <div id="popup1" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">Option 5
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div> -->
-
-                        </div>
-                    </div>
-
-                    <!-- PLACES -->
-
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center mb-5 p-lg-3">
-                            <i class="fa fa-calendar box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>IMPORTANT PLACES</h3>
-                            <p class="px-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatum et quaerat!</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href="#popup2">explore</a>
-                                   </div>
-
-                                   <div id="popup2" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">Option 5
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div>
 
 
 
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- MONUMENTS AND TEMPLES -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center mb-5 p-lg-3">
-                            <i class="fa fa-bug box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>Monuments and Temples</h3>
-                            <p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href="#popup3">explore</a>
-                                   </div>
-
-                                   <div id="popup3" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">Option 5
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div>
-
-                        </div>
-                    </div>
-
-
-                    <!-- MARKET  -->
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center p-lg-3">
-                            <i class="fa fa-cloud-upload box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>Cloud Storage</h3>
-                            <p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href="#popup4">explore</a>
-                                   </div>
-
-                                   <div id="popup4" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">Option 5
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center p-lg-3">
-                            <i class="fa fa-diamond box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>Premium Features</h3>
-                            <p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href="#popup5">explore</a>
-                                   </div>
-
-                                   <div id="popup5" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">Option 5
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="service-block-overlay text-center p-lg-3">
-                            <i class="fa fa-comments box-circle-solid mt-3 mb-3" aria-hidden="true"></i>
-                            <h3>24/7 Support</h3>
-                            <p class="px-4">Never in all their history have men been able truly to conceive of the world as one a single sphere</p>
-                            <div class="box ">
-                                    <a class="button btn btn-primary " href="#popup6">explore</a>
-                                   </div>
-
-                                   <div id="popup6" class="overlay">
-                                    <div class="popup">
-                                    <h2 class="text-lead mt-3" >What you wanna eat?</h2>
-                                    <a class="close" href="#info">×</a>
-                                    <div class="content">
-
-
-                                    <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 1
-                                            </label>
-                                          </div>
-                                          <div class="form-check">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 2
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                            <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="optradio">Option 3
-                                            </label>
-                                          </div>
-                                          <div class="form-check ">
-                                                <label class="form-check-label">
-                                                  <input type="radio" class="form-check-input" name="optradio">Option 4
-                                                </label>
-                                              </div>
-                                              <div class="form-check ">
-                                                    <label class="form-check-label">
-                                                      <input type="radio" class="form-check-input" name="optradio">ye
-                                                    </label>
-                                                  </div>
-                                                  <button class="btn btn-primary btn-md mt-3">DONE</button>
-                                    </div>
-                                    </div>
-                                   </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Info block 1 -->
-    <section class="info-section bg-primary py-0">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 content-half mt-md-0 pl-5 pt-4">
-                    <div class="head-box mb-5 pl-5 mt-2">
-                        <h2 class="text-white">Our Story</h2>
-                        <h6 class="text-white text-underline-rb-white">This is information panel</h6>
-                    </div>
-                    <ul class="pl-5">
-                        <li>
-                            <i class="fa fa-laptop box-round-outline" aria-hidden="true"></i>
-                            <span class="list-content">
-                                <strong>Responsive Design</strong>
-                                <br>Eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fa fa-cloud box-round-outline " aria-hidden="true"></i>
-                            <span class="list-content">
-                                <strong>Cloud Storage</strong>
-                                <br>Eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </li>
-                        <li>
-                            <i class="fa fa-comment box-round-outline " aria-hidden="true" ></i>
-                            <span class="list-content">
-                                <strong>Premium Features</strong>
-                                <br>Eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 p-0 m-0">
-                    <img src="https://grafreez.com/wp-content/temp_demos/suffi/img/intro-bg.jpg" class="img-fluid">
-                </div>
-            </div>
-    </section>
-    <!-- team style 1 -->
-    <section class="team-section py-5">
+    <section class="team-section py-5" id="team-section">
         <div class="container">
             <div class="row mb-5">
                 <div class="head-box text-center mb-5 col-md-12">
@@ -451,11 +99,11 @@
                         <img class="img-fluid" src="https://scontent.fpat1-1.fna.fbcdn.net/v/t1.0-9/19430177_1706595122687503_3861713743195020908_n.jpg?_nc_cat=104&_nc_ht=scontent.fpat1-1.fna&oh=173e5800abc17c8ee0498e3446d29aa6&oe=5C9F594F" alt="">
                         <div class="overlay-content">
                           <h3 class="text-white ml-3 my-0">Srijan Saurav</h3>
-                          <p class="text-white ml-3 mb-3">Back-End</p>
+                          <p class="text-white ml-3 mb-3">Back-end</p>
                           <span class="socail-l ml-3 mb-3">
                             <a href="#" class="mr-2"><i class="fab fa-facebook box-circle-solid"></i></a>
-                            <a href="http://www.twitter.com/sauravsrijan" class="mr-2"><i class="fab fa-twitter box-circle-solid"></i></a>
-                            <a href="http://www.github.com/sauravsrijan"><i class="fab fa-github box-circle-solid"></i></a>
+                            <a href="#" class="mr-2"><i class="fab fa-twitter box-circle-solid"></i></a>
+                            <a href="#"><i class="fab fa-github box-circle-solid"></i></a>
                           </span>
                         </div>
                     </div>

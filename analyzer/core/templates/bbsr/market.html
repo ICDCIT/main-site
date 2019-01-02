@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+{% load staticfiles %}
+
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -78,10 +80,21 @@ chart2.render();
 
 
 </head>
-<body>
-<div id="MainGraph" style="height: 370px; width: 50%;"></div>
-<div id="clothing" style="height: 370px; width: 100%;"></div>
 
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:bbsr' %}>Bhubaneshwar</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Market</li>
+  </ol>
+</nav>
+
+<body>
+<div class="container">
+<div id="MainGraph" style="height: 370px; width: 70%;"></div>
+<div id="clothing" style="height: 300px; width: 70%;"></div>
+</div>
 <!-- Table for clothing -->
 <table class="table table-striped">
   <thead>
@@ -146,7 +159,7 @@ chart2.render();
 
   </tbody>
 </table>
-
+<!-- End table for clothing -->
 
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
