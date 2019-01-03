@@ -1,2 +1,260 @@
+<!DOCTYPE HTML>
 {% load staticfiles %}
-{% include 'core/navbar.html' %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+
+/*Market Analysis Main graph function*/
+window.onload = function () {
+/*North Indian Cuisine function*/
+var chart1 = new CanvasJS.Chart("north", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "North Indian Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.9, label: "Jahanpanah" },
+{ y: 4.2, label: "Pinch Of Spice" },
+{ y: 4.0, label: "Momo Cafe" },
+{ y: 4.3, label: "Peshwari - ITC Mughal" },
+{ y: 3.8, label: "Dawat-e-Nawab-Radisson Blu" },
+{ y: 3.9, label: "The Latitude-Radisson Blu" },
+{ y: 3.4, label: "The Charcoal Chimney" },
+{ y: 4.9, label: "sheroes Hangout" },
+{ y: 3.8, label: "Bon Barbecue" },
+{ y: 3.9, label: "Chapter 1 Cafe" },
+{ y: 3.7, label: "Pind Balluchi" },
+{ y: 4.2, label: "Tea’se Me-Rooftop Tea Boutique" }
+]
+    }]
+});
+/*chinese graph function*/
+var chart2 = new CanvasJS.Chart("chinese", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Chinese Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.2, label: "Pinch Of Spice" },
+{ y: 3.9, label: "The Latitude - Radisson Blu" },
+{ y: 3.4, label: "The Charcoal Chimney" },
+{ y: 4.9, label: "Sheroes Hangout" },
+{ y: 3.8, label: "Bon Barbecue" },
+{ y: 4.2, label: "Tea’se Me- Rooftop Tea Boutique" }
+]
+    }]
+});
+
+/*continental graph function*/
+
+var chart3 = new CanvasJS.Chart("continental", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Continental Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.9, label: "The Latitude - Radisson Blu" },
+{ y: 3.4, label: "The Charcoal Chimney" },
+{ y: 3.8, label: "Bon Barbecue" },
+{ y: 3.9, label: "Chapter 1 Cafe" },
+{ y: 4.2, label: "Tea’se Me - Rooftop Tea Boutique" }
+]
+    }]
+});
+
+/*italian graph function*/
+
+var chart4 = new CanvasJS.Chart("italian", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Italian Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.9, label: "Chapter ! Cafe" },
+{ y: 4.4, label: "Pizza Hut" },
+{ y: 4.2, label: "Tea’se Me - Rooftop Tea Boutique" }
+]
+      }]
+    });
+
+
+/*mughlai graph function*/
+
+var chart5 = new CanvasJS.Chart("mughlai", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Mughlai Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 3.9, label: "Jahanpanah" },
+{ y: 3.5, label: "Rangrezz Restaurant" },
+{ y: 4.2, label: "Pinch Of Spice" },
+{ y: 4.3, label: "Peshwri - ITC Mughal" },
+{ y: 4.0, label: "Taj Bano - ITC Mughal" },
+{ y: 3.6, label: "G Thal" },
+{ y: 3.8, label: "Dawat-E-Nawab- Radisson Blu" },
+{ y: 3.4, label: "The Charcoal Chimney" },
+{ y: 3.7, label: "Pind Balluchi" }
+]
+      }]
+    });
+
+
+/*cafe graph function*/
+
+var chart6 = new CanvasJS.Chart("cafe", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Cafe"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.9, label: "Sheroes Hangout" },
+{ y: 3.9, label: "Chapter 1 Cafe" }
+]
+      }]
+    });
+
+
+
+/*Rajasthani graph function*/
+
+var chart7 = new CanvasJS.Chart("rajasthani", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Rajasthani Cuisine"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.00, label: "Chokho Jeeman Marwari Jain Bhojanalya" },
+{ y: 3.60, label: "G Thal" }
+]
+      }]
+    });
+
+
+chart1.render()
+chart2.render()
+chart3.render()
+chart4.render()
+chart5.render()
+chart6.render()
+chart7.render();
+}
+</script>
+
+
+</head>
+
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:agra' %}>Agra</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Food</li>
+  </ol>
+</nav>
+
+<body>
+<div class="container">
+  <!-- Main graph -->
+  <!-- <div id="MainGraph" style="height: 370px; width: 70%;"></div> -->
+
+  <!-- North Indian -->
+  <div id="north" style="height: 300px; width: 100%;"></div>
+
+  <!-- Chinese -->
+  <div id="chinese" style="height: 300px; width: 100%;"></div>
+
+  <!-- Continental -->
+  <div id="continental" style="height: 300px; width: 100%;"></div>
+
+  <!-- Italian -->
+  <div id="italian" style="height: 300px; width: 100%;"></div>
+
+  <!-- Mughlai -->
+  <div id="mughlai" style="height: 300px; width: 100%;"></div>
+
+  <!-- Cafe -->
+  <div id="cafe" style="height: 300px; width: 100%;"></div>
+
+  <!-- Rajasthani -->
+  <div id="rajasthani" style="height: 300px; width: 100%;"></div>
+
+</div>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script>
 
-/*Market Analysis Main graph*/
+/*Market Analysis Main graph function*/
 window.onload = function () {
 
 var chart1 = new CanvasJS.Chart("MainGraph", {
     animationEnabled: true,
 
     title:{
-        text:"Bhubaneshwar Market Analysis"
+        text:"Agra Market Analysis"
     },
     axisX:{
         interval: 1
@@ -29,65 +29,50 @@ var chart1 = new CanvasJS.Chart("MainGraph", {
         axisYType: "secondary",
         color: "#014D65",
         dataPoints: [
-            { y: 4.2, label: "The Pal Heights" },
-            { y: 3.5, label: "Orrisa State Handloom" },
-            { y: 3.9, label: "Orissa Mordern Art Gallery" },
-            { y: 4.1, label: "Station Square" },
-            { y: 3.9, label: "Saree Mandir" },
-            { y: 4.2, label: "Ekmara Hart" },
-            { y: 4.3, label: "Big Bazar" },
-            { y: 4.6, label: "Esplanade" },
-            { y: 4.2, label: "INOX" },
-            { y: 4.2, label: "BMC Keshari Mall" },
-            { y: 4.3, label: "Reliance Trends" },
-            { y: 4.3, label: "Market Building" },
-            { y: 4.5, label: "Soumya Handicraft" },
-            { y: 4.3, label: "Utkalika" }
-        ]
+{ y: 4.0, label: "Agra Art Gallery" },
+{ y: 4.0, label: "Shahin Arts" },
+{ y: 3.5, label: "Sadar Bazaar" },
+{ y: 4.0, label: "Kinari Bazaar" },
+{ y: 5.0, label: "Shilpgram" },
+{ y: 3.7, label: "Saket Mall" },
+{ y: 4.6, label: "The Warehouse of Gifts and Souvenirs" },
+{ y: 3.4, label: "Kashmiri Bazar" },
+{ y: 4.5 , label: "Marble Handicrafts" },
+{ y: 4.7, label: "kailash Plaza" },
+{ y: 3.8, label: "Gems and Arts Gallery" },
+{ y: 4.0, label: "Mughal Carpet" },
+{ y: 4.0, label: "Big Bazaar Ratan Mall" },
+{ y: 4.1, label: "Subhash Emporium" }
+]
     }]
 });
 
-var chart2 = new CanvasJS.Chart("clothing", {
-    animationEnabled: true,
-    theme: "light2",
-    title:{
-        text: "Clothing"
-    },
-    axisY:{
-        title: "Ratings",
-        includeZero: false
-    },
-    axisX:{
-        title: "Market Name"
-    },
-    data: [{
-        type: "line",
-        dataPoints: [
-            { y: 4.3, label: "Market Building" },
-            { y: 4.3, label: "Reliance Trends"},
-            { y: 4.6, label: "Esplanade", indexLabel: "highest",markerColor: "red", markerType: "triangle" },
-            { y: 4.2, label: "BMC Keshari Mall" },
-            { y: 4.3, label: "Big Bazar" },
-            { y: 3.9, label: "Saree Mandir", indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-            { y: 4.2, label: "The Pal Heights" }
-        ]
-    }]
-});
-chart1.render()
-chart2.render();
+
+chart1.render();
 }
 </script>
 
 
 </head>
-{% include 'core/navbar.html' %}
+
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:agra' %}>Agra</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Market</li>
+  </ol>
+</nav>
+
 <body>
 <div class="container">
-<div id="MainGraph" style="height: 370px; width: 70%;"></div>
-<div id="clothing" style="height: 300px; width: 70%;"></div>
+  <!-- Main graph -->
+  <div id="MainGraph" style="height: 370px; width: 70%;"></div>
 </div>
-<!-- Table for clothing -->
-<table class="table table-striped">
+
+
+<!-- Table -->
+<!-- <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -149,8 +134,8 @@ chart2.render();
     </tr>
 
   </tbody>
-</table>
-<!-- End table for clothing -->
+</table> -->
+<!-- End table -->
 
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

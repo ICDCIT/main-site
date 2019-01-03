@@ -33,8 +33,8 @@ def AgraMarket(request):
 def AgraFood(request):
     return render(request, 'agra/food.html')
 
-def AgraMonument(request):
-    return render(request, 'agra/monument.html')
+def AgraPlaces(request):
+    return render(request, 'agra/places.html')
 
 def AgraWeather(request):
     return render(request, 'agra/weather.html')

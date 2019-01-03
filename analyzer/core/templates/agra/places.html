@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script>
+window.onload = function () {
+
+/*Monuments graph function*/
+var chart1 = new CanvasJS.Chart("monument", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Monuments"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Taj Mahal" },
+{ y: 4.5, label: "Agra Fort" },
+{ y: 4.3, label: "Buland Darwaza" },
+{ y: 4.3, label: "Tomb of Itimad ud Daulah" },
+{ y: 4.3, label: "Taj Mahal Museum" },
+{ y: 4.4, label: "Akbar’s Tomb" },
+{ y: 4.1, label: "Shah Jahan Park" },
+{ y: 5.0, label: "Spiritual Museum" },
+{ y: 4.2, label: "Ram Bagh" },
+{ y: 4.2, label: "Amar Bagh" },
+{ y: 4.2, label: "Mehtab Bagh" },
+{ y: 4.0, label: "DayalBagh" },
+{ y: 3.7, label: "Chini Ka Rauza" }
+]
+    }]
+});
+/*historical places graph function*/
+var chart2 = new CanvasJS.Chart("history", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Historical Places"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.6, label: "Taj Mahal" },
+{ y: 4.5, label: "Agra Fort" },
+{ y: 4.3, label: "Buland Darwaza" },
+{ y: 4.3, label: "Tomb of Itimad ud Daulah" },
+{ y: 4.3, label: "Taj Mahal Museum" },
+{ y: 4.4, label: "Akbar’s Tomb" },
+{ y: 4.2, label: "Ram Bagh" },
+{ y: 4.2, label: "Amar Bagh" },
+{ y: 4.2, label: "Mehtab Bagh" },
+{ y: 3.7, label: "Chini Ka Rauza" }
+]
+    }]
+});
+
+/*temples graph function*/
+
+var chart3 = new CanvasJS.Chart("temple", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Temples"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Temples"
+    },
+    data: [{
+        type: "line",
+        dataPoints: [
+{ y: 4.3, label: "Jama Mosque" },
+{ y: 4.4, label: "Moti Masjid" },
+{ y: 4.0, label: "Mangleshwar Temple" },
+{ y: 4.8, label: "Bageshwar Nath Mandir" },
+{ y: 4.7, label: "Gurudwara Guru Ka Taal" }
+]
+    }]
+});
+
+chart1.render()
+chart2.render()
+chart3.render();
+}
+</script>
+
+
+</head>
+
+<!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+    <li class="breadcrumb-item"><a href={% url 'core:agra' %}>Agra</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Places</li>
+  </ol>
+</nav>
+
+<body>
+<div class="container">
+  <!-- Monuments -->
+  <div id="monument" style="height: 300px; width: 100%;"></div>
+
+  <!-- Historical Places -->
+  <div id="history" style="height: 300px; width: 100%;"></div>
+
+  <!-- Temples -->
+  <div id="temple" style="height: 300px; width: 100%;"></div>
+</div>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

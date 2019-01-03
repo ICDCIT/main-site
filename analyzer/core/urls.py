@@ -14,7 +14,7 @@ urlpatterns = [
     path('bbsr/Crime/', views.BbsrCrime, name='bbsrcrime'),
     path('agra/market/', views.AgraMarket, name='agramarket'),
     path('agra/food/', views.AgraFood, name='agrafood'),
-    path('agra/monument/', views.AgraMonument, name='agramonument'),
+    path('agra/places/', views.AgraPlaces, name='agraplaces'),
     path('agra/Weather/', views.AgraWeather, name='agraweather'),
     path('agra/Crime/', views.AgraCrime, name='agracrime')
 ]
