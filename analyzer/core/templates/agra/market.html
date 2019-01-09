@@ -47,8 +47,159 @@ var chart1 = new CanvasJS.Chart("MainGraph", {
     }]
 });
 
+/*Clothing graph function*/
+var chart2 = new CanvasJS.Chart("clothing", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Clothing"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Market Name"
+    },
+    data: [{
+        type: "line",
+        color: "#B0C4DE",
+        dataPoints: [
+{ y: 4.0, label: "Big Bazaar Ratan Mall" },
+{ y: 4.7, label: "kailash Plaza" },
+{ y: 3.7, label: "Saket Mall" },
+{ y: 4.0, label: "Kinari Bazaar" },
+{ y: 3.5, label: "Sadar Bazaar" }
+]
+    }]
+});
+/*handicraft graph function*/
+var chart3 = new CanvasJS.Chart("handicraft", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Handicrafts"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        color: "#008080",
+        dataPoints: [
+{ y: 4.0, label: "Mughal Carpet" },
+{ y: 4.7, label: "Kailash Plaza" },
+{ y: 3.4, label: "Kashmiri Bazar" },
+{ y: 5.0, label: "Shilpgram" },
+{ y: 4.0, label: "Shahin Arts" }
+]
+    }]
+});
 
-chart1.render();
+/*Household Shops function*/
+
+var chart4 = new CanvasJS.Chart("household", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Household Shops"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        color: "#000000",
+        dataPoints: [
+{ y: 4.0, label: "Big Bazar Ratan Mall" },
+{ y: 4.0, label: "Mughal Carpet" },
+{ y: 4.7, label: "kailash Plaza" },
+{ y: 4.6, label: "The Warehouse of Gifts and Souvenirs" },
+{ y: 3.7, label: "Saket Mall" }
+]
+    }]
+});
+
+/*agra special graph function*/
+
+
+
+var chart5 = new CanvasJS.Chart("special", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Agra Special Markets"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        color: "#FF4500",
+        dataPoints: [
+{ y: 4.0, label: "Mughal Carpet" },
+{ y: 3.8, label: "Gems and Arts Gallery" },
+{ y: 4.5 , label: "Marble Handicrafts" },
+{ y: 3.4, label: "Kashmiri Bazar" },
+{ y: 5.0, label: "Shilpgram" },
+{ y: 4.0, label: "Shahin Arts" },
+{ y: 4.0, label: "Agra Art Gallery" }
+]
+      }]
+    });
+
+
+/*Showpieces function*/
+
+var chart6 = new CanvasJS.Chart("showpiece", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+        text: "Showpieces"
+    },
+    axisY:{
+        title: "Ratings",
+        includeZero: false
+    },
+    axisX:{
+        title: "Venue"
+    },
+    data: [{
+        type: "line",
+        color: "#8B4513",
+        dataPoints: [
+{ y: 4.1, label: "Subhash Emporium" },
+{ y: 4.0, label: "Big Bazaar Ratan Mall" },
+{ y: 4.0, label: "Mughal Carpet" },
+{ y: 3.8, label: "Gems and Arts Gallery" },
+{ y: 4.7, label: "kailash Plaza" },
+{ y: 4.5 , label: "Marble Handicrafts" },
+{ y: 4.6, label: "The Warehouse of Gifts and Souvenirs"},
+{ y: 4.0, label: "Agra Art Gallery" }
+]
+    }]
+});
+
+
+
+chart1.render()
+chart2.render()
+chart3.render()
+chart4.render()
+chart5.render()
+chart6.render();
 }
 </script>
 
@@ -67,7 +218,23 @@ chart1.render();
 <body>
 <div class="container">
   <!-- Main graph -->
-  <div id="MainGraph" style="height: 370px; width: 70%;"></div>
+  <div id="MainGraph" style="height: 370px; width: 100%;"></div>
+
+  <!-- clothing graph -->
+  <div id="clothing" style="height: 370px; width: 100%;"></div>
+
+  <!-- Handicrafts graph -->
+  <div id="handicraft" style="height: 370px; width: 100%;"></div>
+
+  <!-- Household Shops graph -->
+  <div id="household" style="height: 370px; width: 100%;"></div>
+
+  <!-- Agra Special graph -->
+  <div id="special" style="height: 370px; width: 100%;"></div>
+
+  <!-- Showpieces graph -->
+  <div id="showpiece" style="height: 370px; width: 100%;"></div>
+
 </div>
 
 

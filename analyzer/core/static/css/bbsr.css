@@ -1,9 +1,19 @@
 html,body{
-    padding-top: 23px;
+    padding:0;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 
 
+}
+#carousel{
+    width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: .5rem;
 }
 
 
@@ -157,7 +167,7 @@ i.box-circle-solid{
 }
 
 a:visited {
-    color: #ffffff !important;
+    color: #473d3d !important;
     transition: color 0.5s;
     /* Safari */
 
@@ -215,7 +225,7 @@ a:focus {
 }
 
 .hero .mgmt-links-wrapper a {
-    color: #ffffff !important;
+	color: #074052!important;
 }
 
 .hero .mgmt-links-wrapper .link-box:hover {
@@ -237,12 +247,15 @@ a:focus {
 .navbar-toggler {
 	background-color:black;
 	color: #323335;
-    border: 1px solid white;
+    border: 1px solid #074052;
 }
 /* .hero .search-from{
 	height: 85px;
     font-size: 35px;
 } */
+.navbar-brand{
+	color: #333;
+}
 
 
 
@@ -284,8 +297,7 @@ a:focus {
 /* POP UP */
 #info .button {
 
-    margin-left: 120px;
-
+    margin-left: px;
     color: #fff;
     border: 2px solid #FF9800;
     border-radius: 20px;

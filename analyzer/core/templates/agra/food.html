@@ -24,6 +24,7 @@ var chart1 = new CanvasJS.Chart("north", {
     },
     data: [{
         type: "line",
+        color: "#6B8E23",
         dataPoints: [
 { y: 3.9, label: "Jahanpanah" },
 { y: 4.2, label: "Pinch Of Spice" },
@@ -56,6 +57,7 @@ var chart2 = new CanvasJS.Chart("chinese", {
     },
     data: [{
         type: "line",
+        color: "#BA55D3",
         dataPoints: [
 { y: 4.2, label: "Pinch Of Spice" },
 { y: 3.9, label: "The Latitude - Radisson Blu" },
@@ -84,6 +86,7 @@ var chart3 = new CanvasJS.Chart("continental", {
     },
     data: [{
         type: "line",
+        color: "#008B8B",
         dataPoints: [
 { y: 3.9, label: "The Latitude - Radisson Blu" },
 { y: 3.4, label: "The Charcoal Chimney" },
@@ -111,6 +114,7 @@ var chart4 = new CanvasJS.Chart("italian", {
     },
     data: [{
         type: "line",
+        color: "#FF1493",
         dataPoints: [
 { y: 3.9, label: "Chapter ! Cafe" },
 { y: 4.4, label: "Pizza Hut" },
@@ -137,6 +141,7 @@ var chart5 = new CanvasJS.Chart("mughlai", {
     },
     data: [{
         type: "line",
+        color: "#483D8B",
         dataPoints: [
 { y: 3.9, label: "Jahanpanah" },
 { y: 3.5, label: "Rangrezz Restaurant" },
@@ -169,6 +174,7 @@ var chart6 = new CanvasJS.Chart("cafe", {
     },
     data: [{
         type: "line",
+        color: "#6B8E23",
         dataPoints: [
 { y: 4.9, label: "Sheroes Hangout" },
 { y: 3.9, label: "Chapter 1 Cafe" }
@@ -195,12 +201,38 @@ var chart7 = new CanvasJS.Chart("rajasthani", {
     },
     data: [{
         type: "line",
+        color: "#BA55D3",
         dataPoints: [
 { y: 4.00, label: "Chokho Jeeman Marwari Jain Bhojanalya" },
 { y: 3.60, label: "G Thal" }
 ]
       }]
     });
+
+/*Average Cost Function*/
+var chart8 = new CanvasJS.Chart("averagecost", {
+    animationEnabled: true,
+    theme: "light2", // "light1", "light2", "dark1", "dark2"
+    title:{
+        text: "Average Cost for 2"
+    },
+    axisY: {
+        title: "INR"
+    },
+    data: [{
+        type: "column",
+        dataPoints: [
+{ y: 683.33, label: "Agra Cantt" },
+{ y: 700, label: "Civil Lines" },
+{ y: 2000, label: "Courtyard By Marriott Agra" },
+{ y: 2500, label: "ITC Mughal,Tajganj" },
+{ y: 800, label: "Khandari" },
+{ y: 1800, label: "Radisson Blu,Tajganj" },
+{ y: 550, label: "Rakabganj" },
+{ y: 737.5, label: "Tajganj" },
+]
+    }]
+});
 
 
 chart1.render()
@@ -209,7 +241,8 @@ chart3.render()
 chart4.render()
 chart5.render()
 chart6.render()
-chart7.render();
+chart7.render()
+chart8.render();
 }
 </script>
 
@@ -250,6 +283,10 @@ chart7.render();
 
   <!-- Rajasthani -->
   <div id="rajasthani" style="height: 300px; width: 100%;"></div>
+
+  <!-- Average Cost for 2 -->
+  <div id="averagecost" style="height: 370px; width: 100%;"></div>
+
 
 </div>
 

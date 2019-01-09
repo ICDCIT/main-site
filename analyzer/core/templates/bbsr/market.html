@@ -3,7 +3,10 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <script>
 
 /*Market Analysis Main graph function*/
@@ -13,7 +16,7 @@ var chart1 = new CanvasJS.Chart("MainGraph", {
     animationEnabled: true,
 
     title:{
-        text:"Bhubaneshwar Market Analysis"
+
     },
     axisX:{
         interval: 1
@@ -62,6 +65,7 @@ var chart2 = new CanvasJS.Chart("clothing", {
     },
     data: [{
         type: "line",
+        color: "#6B8E23",
         dataPoints: [
             { y: 4.3, label: "Market Building" },
             { y: 4.3, label: "Reliance Trends"},
@@ -89,6 +93,7 @@ var chart3 = new CanvasJS.Chart("cinema", {
     },
     data: [{
         type: "line",
+        color: "#008B8B",
         dataPoints: [
             { y: 4.2, label: "BMC Keshari Mall" },
             { y: 4.2, label: "INOX" },
@@ -114,6 +119,7 @@ var chart4 = new CanvasJS.Chart("malls", {
     },
     data: [{
         type: "line",
+        color: "#8B008B",
         dataPoints: [
             { y: 4.3, label: "Market Building" },
             { y: 4.3, label: "Reliance Trends" },
@@ -127,6 +133,8 @@ var chart4 = new CanvasJS.Chart("malls", {
 });
 
 /*odisha special graph function*/
+
+
 
 var chart5 = new CanvasJS.Chart("special", {
     animationEnabled: true,
@@ -143,6 +151,7 @@ var chart5 = new CanvasJS.Chart("special", {
     },
     data: [{
         type: "line",
+        color: "#FF1493",
         dataPoints: [
             { y: 4.3, label: "Utkalika" },
             { y: 4.5, label: "Saumya Handicraft" },
@@ -178,27 +187,54 @@ chart5.render();
 </nav>
 
 <body>
-<div class="container">
-  <!-- Main graph -->
-  <div id="MainGraph" style="height: 370px; width: 70%;"></div>
+        <div style="margin-top: 40px;" class="graph-heading">
+            <h3 style="margin-bottom:0;" class="text-underline-primary mb-5 text-center display-4"> Bhubaneshwar Market Analysis</h3>
+            <hr style="width:30%; margin-top:2px; height:40px; border-top: 4px double #8c8b8b;
+            text-align: center;">
+        </div>
 
+
+<div class="container-">
+  <!-- Main graph -->
+  <div id="MainGraph" style="height: 370px; width: 70%;  margin-bottom: 10px;"></div>
+
+</div>
+
+<div style="margin-top:40px;" class="graph-section  ">
+
+<div class="container-fluid mb-5">
+
+    <div class="row mb-4 m-4">
+
+        <div class="col-md-6 mb-md-0 mb-sm-4 mt-5">
   <!-- Clothing -->
-  <div id="clothing" style="height: 300px; width: 70%;"></div>
+  <div id="clothing" style="height: 300px; width: 70%;  ">
+<p class="lead"></p>
+</div>
+            </div>
 
   <!-- Cinema -->
-  <div id="cinema" style="height: 300px; width: 70%;"></div>
+  <div class="col-md-6 mb-sm-4 mt-5">
+  <div id="cinema" style="height: 300px; width: 70%; "></div>
+    </div>
 
   <!-- Malls -->
-  <div id="malls" style="height: 300px; width: 70%;"></div>
+  <div class="col-md-6  mb-sm-4 mt-5">
+  <div id="malls" style="height: 300px; width: 70%;  "></div>
+    </div>
 
   <!-- odisha special -->
-  <div id="special" style="height: 300px; width: 70%;"></div>
+  <div class="col-md-6  mb-sm-4 mt-5">
+  <div id="special" style="height: 300px; width: 70%; "></div>
+  </div>
 
+</div>
+</div>
 </div>
 
 
 <!-- Table -->
-<table class="table table-striped">
+<table style="padding:10px;" class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -265,5 +301,9 @@ chart5.render();
 
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
