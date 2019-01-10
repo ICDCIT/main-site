@@ -4,6 +4,30 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+            .write-ups{
+                transform: scale(1.05);
+                color: white;
+                background-color: rgba(7, 7, 59, 0.897);
+                transition: 0.5s ease-in;
+                box-shadow:2px 8px 3px black;
+                width:70%; 
+                border:1px solid rgb(29, 26, 26);
+                padding:10px;
+                transition: 0.3s linear;
+                justify-content: center;
+                margin-left: 150px;
+                margin-bottom:90px;
+                cursor: crosshair; 
+            }
+            .write-ups:hover{
+                transform: scale(1.09);
+                transition-delay: 0.2s;
+               
+                box-shadow: 2px 10px 7px black;
+    
+            }
+        </style>
 <script>
 window.onload = function () {
 
@@ -123,12 +147,17 @@ chart3.render();
 <div class="container">
   <!-- Monuments -->
   <div id="monument" style="height: 300px; width: 100%;"></div>
-
+    <h4  class=" write-ups mb-5 ">Mughal era is famous for the monuments built during mughal emperor reign. Every monument has it's own story and 
+            and history related to it.
+            Agra being capital of Mughal dynasty have many monuments including 'one of the seven wonders "Taj Mahal"'.</h4>
   <!-- Historical Places -->
   <div id="history" style="height: 300px; width: 100%;"></div>
-
+    <h4  class=" write-ups mb-5 ">Historical city have many historical monuments but the most famous is Agra Fort.
+        </h4>
   <!-- Temples -->
   <div id="temple" style="height: 300px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">Agra has most famous worship sites. Bagheshwar Nath being the famous.  Jama mosque and Moti masjid are also famous.</h4>
+
 </div>
 
 

@@ -23,7 +23,7 @@ def BbsrWeather(request):
     return render(request, 'bbsr/weather.html')
 
 def BbsrCrime(request):
-    return render(request, 'agra/crime.html')
+    return render(request, 'bbsr/crime.html')
 
 
 

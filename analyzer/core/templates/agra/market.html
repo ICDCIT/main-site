@@ -4,6 +4,30 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+            .write-ups{
+                transform: scale(1.05);
+                color: white;
+                background-color: rgba(7, 7, 59, 0.897);
+                transition: 0.5s ease-in;
+                box-shadow:2px 8px 3px black;
+                width:70%; 
+                border:1px solid rgb(29, 26, 26);
+                padding:10px;
+                transition: 0.3s linear;
+                justify-content: center;
+                margin-left: 150px;
+                margin-bottom:60px;
+                cursor: crosshair; 
+            }
+            .write-ups:hover{
+                transform: scale(1.09);
+                transition-delay: 0.2s;
+               
+                box-shadow: 2px 10px 7px black;
+    
+            }
+        </style>
 <script>
 
 /*Market Analysis Main graph function*/
@@ -13,7 +37,7 @@ var chart1 = new CanvasJS.Chart("MainGraph", {
     animationEnabled: true,
 
     title:{
-        text:"Agra Market Analysis"
+        // text:"Agra Market Analysis"
     },
     axisX:{
         interval: 1
@@ -136,7 +160,7 @@ var chart5 = new CanvasJS.Chart("special", {
     animationEnabled: true,
     theme: "light2",
     title:{
-        text: "Agra Special Markets"
+       
     },
     axisY:{
         title: "Ratings",
@@ -214,26 +238,44 @@ chart6.render();
     <li class="breadcrumb-item active" aria-current="page">Market</li>
   </ol>
 </nav>
+<div class="container">
+        <div  class="graph-heading">
+                <h2 style="margin-bottom:10PX;" class="text-underline-primary mb-5 text-center display-2">AGRA MARKET ANALYSIS</h2>
+                <hr style="width:30%; margin-top:2px; height:40px; border-top: 4px double #8c8b8b;
+                text-align: center;">
+            </div>
 
 <body>
 <div class="container">
   <!-- Main graph -->
   <div id="MainGraph" style="height: 370px; width: 100%;"></div>
+  
 
   <!-- clothing graph -->
-  <div id="clothing" style="height: 370px; width: 100%;"></div>
+  <div id="clothing" style="height: 370px; width: 100%; margin-top: 50px;"></div>
+  <h4  class=" write-ups mb-5 ">If you like to shop clothes Agra gives a number of options. Most famous is Kailash Plaza which is having all the famous brand shops .</h4>
+
 
   <!-- Handicrafts graph -->
   <div id="handicraft" style="height: 370px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">If you love handicrafts then Agra is one of the best place to visit. Handicraft market called "Shilpgram" is best to visit in Agra for  Handicraft.</h4>
+
 
   <!-- Household Shops graph -->
   <div id="household" style="height: 370px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">Household  shopping is a must, and if it is from a historical city who won't be pleased to do it. For Household shopping Kailash Plaza is the best.</h4>
+
 
   <!-- Agra Special graph -->
   <div id="special" style="height: 370px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">If you love handicrafts then Agra is one of the best Agra place to visit. Handicraft market called "Shilpgram" is best to visit in Agra for  Handicraft.
+        A historical city of India, which witnessed various changing courses of history must be having it's own speciality, and if it's goods who won't want to buy 
+        it.FOr Agra Special market called "Shilpgram" is best.</h4>
+
 
   <!-- Showpieces graph -->
   <div id="showpiece" style="height: 370px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">If you love showpieces then Agra has various shops. Most famous is Kailash Plaza.</h4>
 
 </div>
 

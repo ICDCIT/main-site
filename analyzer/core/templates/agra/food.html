@@ -4,6 +4,31 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+            .write-ups{
+                transform: scale(1.05);
+                color: white;
+                background-color: rgba(7, 7, 59, 0.897);
+                transition: 0.5s ease-in;
+                box-shadow:2px 8px 3px black;
+                width:70%; 
+                border:1px solid rgb(29, 26, 26);
+                padding:10px;
+                transition: 0.3s linear;
+                justify-content: center;
+                margin-left: 150px;
+                margin-bottom:90px;
+                cursor: crosshair; 
+            }
+            .write-ups:hover{
+                transform: scale(1.09);
+                transition-delay: 0.2s;
+               
+                box-shadow: 2px 10px 7px black;
+    
+            }
+        </style>
+    
 <script>
 
 /*Market Analysis Main graph function*/
@@ -259,33 +284,48 @@ chart8.render();
 </nav>
 
 <body>
+
+        <div class="container">
+                <div  class="graph-heading">
+                        <h3 style="margin-bottom:0;" class="text-underline-primary mb-5 text-center display-3">AGRA FOOD ANALYSIS</h3>
+                        <hr style="width:30%; margin-top:2px; height:40px; border-top: 4px double #8c8b8b;
+                        text-align: center;">
+                    </div>
+        
+
 <div class="container">
   <!-- Main graph -->
   <!-- <div id="MainGraph" style="height: 370px; width: 70%;"></div> -->
 
-  <!-- North Indian -->
-  <div id="north" style="height: 300px; width: 100%;"></div>
-
-  <!-- Chinese -->
-  <div id="chinese" style="height: 300px; width: 100%;"></div>
-
-  <!-- Continental -->
-  <div id="continental" style="height: 300px; width: 100%;"></div>
-
-  <!-- Italian -->
-  <div id="italian" style="height: 300px; width: 100%;"></div>
-
-  <!-- Mughlai -->
-  <div id="mughlai" style="height: 300px; width: 100%;"></div>
-
-  <!-- Cafe -->
-  <div id="cafe" style="height: 300px; width: 100%;"></div>
-
-  <!-- Rajasthani -->
-  <div id="rajasthani" style="height: 300px; width: 100%;"></div>
 
   <!-- Average Cost for 2 -->
   <div id="averagecost" style="height: 370px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">The graph showing cost for food for 2 person in different locality, Rakabganjh is found to be comparatively cheapest with affordable restaurants and ITC Mughal,Tajganj to be expensive with expensive restaurants.</h4>
+
+ 
+
+  <!-- North Indian -->
+  <div id="north" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Chinese -->
+  <div id="chinese" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Continental -->
+  <div id="continental" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Italian -->
+  <div id="italian" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Mughlai -->
+  <div id="mughlai" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Cafe -->
+  <div id="cafe" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  <!-- Rajasthani -->
+  <div id="rajasthani" style="height: 300px; width: 100%; margin-bottom:60px;"></div>
+
+  
 
 
 </div>

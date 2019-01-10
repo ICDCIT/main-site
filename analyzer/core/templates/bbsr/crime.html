@@ -1,2 +1,101 @@
+
+<!Doctype html>
 {% load staticfiles %}
-{% include 'core/navbar.html' %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Crime Analysis</title>
+
+
+
+
+    <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("pie", {
+  exportEnabled: true,
+  animationEnabled: true,
+  title:{
+    text: "Crime In India"
+  },
+  legend:{
+    cursor: "pointer",
+    itemclick: explodePie
+  },
+  data: [{
+    type: "pie",
+    showInLegend: true,
+    toolTipContent: "{name}: <strong>{y}%</strong>",
+    indexLabel: "{name} - {y}%",
+    dataPoints: [
+      { y: 14, name: "Andhra Pradesh" },
+      { y: 11, name: "TamilNadu" },
+      { y: 8, name: "Punjab" },
+      { y: 8, name: "Odisha", exploded: true },
+      { y: 3, name: "Maharashtra" },
+      { y: 5, name: "Kerala" },
+      { y: 11, name: "Karnataka"},
+      { y: 5, name: "Gujarat" },
+      { y: 5, name: "Goa" },
+      { y: 8, name: "Bihar" },
+      { y: 8, name: "Assam" }
+    ]
+  }]
+});
+chart.render();
+}
+
+function explodePie (e) {
+  if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+    e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+  } else {
+    e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+  }
+  e.chart.render();
+
+}
+</script>
+
+
+
+
+
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href={% url 'core:index' %}>Home</a></li>
+          <li class="breadcrumb-item"><a href={% url 'core:bbsr' %}>Bhubaneshwar</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Crime</li>
+        </ol>
+      </nav>
+
+      <div class="container-fluid mt-5 ">
+        <div id="pie" style="height: 470px; width: 100%;"></div>
+        <br><br>
+        <div class="container">
+          <img src="{% static 'img/bbsrcrime.png' %}" style="height: 600px; width: auto">
+        </div>
+      </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>

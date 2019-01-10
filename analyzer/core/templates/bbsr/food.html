@@ -4,6 +4,32 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+            .write-ups{
+                transform: scale(1.05);
+                color: white;
+                background-color: rgba(7, 7, 59, 0.897);
+                transition: 0.5s ease-in;
+                box-shadow:2px 8px 3px black;
+                width:70%; 
+                border:1px solid rgb(29, 26, 26);
+                padding:10px;
+                transition: 0.3s linear;
+                justify-content: center;
+                margin-left: 150px;
+                margin-bottom:60px;
+                cursor: crosshair; 
+            }
+            .write-ups:hover{
+                transform: scale(1.09);
+                transition-delay: 0.2s;
+               
+                box-shadow: 2px 10px 7px black;
+    
+            }
+        </style>
+    
 <script>
 
 /*Market Analysis Main graph function*/
@@ -251,32 +277,42 @@ chart8.render();
 
 <body>
 <div class="container">
+        <div style="margin-top: 40px;" class="graph-heading">
+                <h3 style="margin-bottom:0;" class="text-underline-primary mb-5 text-center display-3"> Bhubaneshwar Food Analysis</h3>
+                <hr style="width:30%; margin-top:2px; height:40px; border-top: 4px double #8c8b8b;
+                text-align: center;">
+            </div>
+
+
+     <!-- Average Cost for 2 -->
+  <div id="averagecost" style="height: 300px; width: 100%;"></div>
+  <h4  class=" write-ups mb-5 ">Unit 4 was found to be the cheapest place to dine in while Patia area is also having many affordable restaurants.The Crown was found to be he most expensive restaurant in Bhubaneswar</h4>
+
   <!-- Main graph -->
   <!-- <div id="MainGraph" style="height: 370px; width: 70%;"></div> -->
 
   <!-- Asian -->
-  <div id="asian" style="height: 300px; width: 100%;"></div>
+  <div id="asian" style="height: 300px; width: 100% ;  margin-bottom:50px;"></div>
 
   <!-- Chinese -->
-  <div id="chinese" style="height: 300px; width: 100%;"></div>
+  <div id="chinese" style="height: 300px; width: 100%; margin-bottom:50px;"></div>
 
   <!-- Continental -->
-  <div id="continental" style="height: 300px; width: 100%;"></div>
+  <div id="continental" style="height: 300px; width: 100%; margin-bottom:50px;"></div>
 
   <!-- Italian -->
-  <div id="italian" style="height: 300px; width: 100%;"></div>
+  <div id="italian" style="height: 300px; width: 100%; margin-bottom: 50px;"></div>
 
   <!-- Mexican -->
-  <div id="mexican" style="height: 300px; width: 100%;"></div>
+  <div id="mexican" style="height: 300px; width: 100%; margin-bottom:50px;"></div>
 
   <!-- Cafe -->
-  <div id="cafe" style="height: 300px; width: 100%;"></div>
+  <div id="cafe" style="height: 300px; width: 100%; margin-bottom:50px;"></div>
 
   <!-- Fast Food -->
-  <div id="fastfood" style="height: 300px; width: 100%;"></div>
+  <div id="fastfood" style="height: 300px; width: 100%; margin-top:30px;"></div>
 
-  <!-- Average Cost for 2 -->
-  <div id="averagecost" style="height: 300px; width: 100%;"></div>
+ 
 
 </div>
 
